@@ -6,4 +6,4 @@ Usage: python weather.py city_name
 
 Example: python weather.py new_york
 
-![alt tag(https://github.com/isalman/weather-python/blob/master/img/pic.png?raw=true)
+![alt tag] (https://github.com/isalman/weather-python/blob/master/img/pic.png?raw=true)
