@@ -2,12 +2,9 @@ import json, urllib
 from sys import argv
 from time import localtime, strftime, gmtime
 
-
 def get_weather(city_name, appid):
     response = urllib.urlopen("http://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s" %(city_name, appid))
     weather = response.read()
-
-    
     weather_json = json.loads(weather)
     
     if weather_json['cod'] == 200:
@@ -55,7 +52,7 @@ def get_weather(city_name, appid):
         '''%(curr_time, name, country, wdescription, curr_temp, temp_max, temp_min,
              pressure, sea_level, grnd_level, humidity, wind_speed, wind_dir, sunrise,
              sunset)
-
+        
     else:
         print "\n[-]",weather_json['message']
         print """
@@ -67,6 +64,7 @@ def get_weather(city_name, appid):
               """
         exit()
 
+        
 def main():
     appid = '807a5769331d4af3f7fea717e5b6333b'
     if len(argv) == 2:
@@ -82,5 +80,6 @@ def main():
 
               """
         exit()
+        
 if __name__ == __main__:
     main()
